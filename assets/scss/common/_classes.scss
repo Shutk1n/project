@@ -1,0 +1,9 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  min-width: 250px;
+  height: 60px;
+  background-color: rgba($color-light, 0.1);
+  border: 2px solid $color-light;
+  padding: 0.5em 1em;
+}
