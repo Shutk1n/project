@@ -182,7 +182,11 @@ body {
 }
 
 h1 {
+  letter-spacing: 0.08em;
+
   font-family: "Roboto Slab", serif;
+  font-size: 3.75rem;
+  font-weight: 300;
 }
 
 a {
@@ -195,6 +199,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -203,8 +210,12 @@ a {
   height: 60px;
   padding: 0.5em 1em;
 
+  letter-spacing: 0.1em;
+
   border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
+
+  font-style: 18px;
 }
 
 .header {
@@ -218,17 +229,38 @@ a {
   -ms-flex-align: center;
 
   min-height: 100vh;
-  padding: 100px 0;
+  padding: 150px 0;
 
   color: #ffffff;
   border-color: #2d3651;
   background-image: url(../img/img-header.png);
 }
 
-.header-content__title {
+.header-content {
+  position: relative;
+  z-index: 1;
+  top: 0;
+}
+.header-content____container {
+  min-width: 1340px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.header-content__tilte {
   margin: 0 0 66px;
 
   text-align: center;
+}
+.header-content__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  gap: 20px;
 }
 
 .header-menu {
@@ -239,4 +271,15 @@ a {
   left: 0;
 
   background-color: red;
+}
+
+.header-navbar__btn {
+  display: none;
+}
+
+.header-overlay {
+  position: absolute;
+
+  opacity: 0.8;
+  background-color: #2d3651;
 }
