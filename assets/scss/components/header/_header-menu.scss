@@ -1,17 +1,18 @@
+@use "../../presets/" as *;
+@use "../../mixins/" as *;
+
 .header-menu {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background-color: red;
   z-index: 2;
 
-  .header-menu__container {
-    min-width: 1340px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-
+  &__container {
     display: flex;
+    align-items: center;
+
+    @extend %container;
+    gap: $gap;
   }
 }
