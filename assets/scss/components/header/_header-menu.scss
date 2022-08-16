@@ -9,10 +9,10 @@
   z-index: 2;
 
   &__container {
+    @extend %container;
+
     display: flex;
     align-items: center;
-
-    @extend %container;
     gap: $gap;
   }
 }

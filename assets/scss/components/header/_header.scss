@@ -1,6 +1,9 @@
+@use "../../presets/" as *;
+@use "../../mixins/" as *;
+
 .header {
   position: relative;
-  border-color: $color-primary;
+  background-color: $color-primary;
   background-image: url(../img/img-header.png);
 
   min-height: 100vh;
