@@ -4,7 +4,10 @@
   z-index: 1;
 
   &____container {
-    @extend %container;
+    min-width: $ul;
+    padding-left: $gap;
+    padding-right: $gap;
+    margin: 0 auto;
   }
 
   &__tilte {
