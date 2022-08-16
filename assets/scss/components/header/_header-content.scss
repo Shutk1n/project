@@ -4,10 +4,7 @@
   z-index: 1;
 
   &____container {
-    min-width: 1340px;
-    padding-left: $gap;
-    padding-right: $gap;
-    margin: 0 auto;
+    @extend %container;
   }
 
   &__tilte {

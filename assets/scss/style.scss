@@ -3,6 +3,10 @@
 @import "presets/variables";
 @import "presets/skin";
 
+@import "mixins/mixins";
+@import "mixins/mixins-media";
+@import "mixins/extends";
+
 @import "common/typography";
 @import "common/classes";
 

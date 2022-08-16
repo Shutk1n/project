@@ -1,3 +1,5 @@
 .header-navbar__btn {
-  display: none;
+  &__btn {
+    display: none;
+  }
 }
