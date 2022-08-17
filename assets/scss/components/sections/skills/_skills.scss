@@ -1,0 +1,41 @@
+@use "../../../presets/" as *;
+@use "../../../mixins/" as *;
+
+$local-gap: calc(50px / 3);
+
+.skills {
+  padding: $gap-sm;
+
+  &__container {
+    display: grid;
+
+    gap: $gap-sm;
+    margin-bottom: $gap;
+
+    @media (min-width: 992px) {
+      grid-template-areas: "a1 a1 a2 a3""a4 a5 a5 a6""a7 a8 a9 a6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 991px) and (min-width: 768px) {
+      grid-template-areas: "a1 a1 a2""a3 a4 a4""a5 a5 a6 ""a7 a8 a6""a7 a9 a9";
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 767px) and (min-width: 576px) {
+      grid-template-areas: "a1 a2""a3 a2""a4 a4""a5 a6""a5 a7""a8 a9";
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 575px) {
+      grid-template-areas: "a1""a2""a3""a4""a5""a6""a7""a8""a9";
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}

@@ -6,18 +6,34 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 215px;
-  height: 40px;
   padding: 0.5em 1em;
 
+  width: 210px;
+  height: 40px;
   transition: background-color 0.5s;
   letter-spacing: 0.1em;
 
   border: 2px solid $color-light;
+
 
   &:hover,
   &:focus {
     background-color: $color-accent;
   }
 
+  &--light {
+    min-width: 250px;
+    border-color: rgba($color-light, 0.1);
+  }
+
+  &--primary {
+    min-width: 320px;
+    height: 43px;
+    background-color: rgba($color-primary, 0.8);
+    border: 2px solid $color-primary;
+  }
+}
+
+.hidden {
+  @include visually-hidden
 }
