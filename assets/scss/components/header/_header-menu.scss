@@ -3,16 +3,21 @@
 
 .header-menu {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  @include md {
+    background-color: rgba($color-gray-dark, 0.25);
+    box-shadow: -5px -10px 30px darken($color-gray-dark, 40%);
+  }
 
   &__container {
-    @extend %container;
-
     display: flex;
     align-items: center;
+
+    @extend %container;
     gap: $gap;
   }
 }

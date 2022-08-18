@@ -22,6 +22,20 @@ h1 {
   font-size: 3.75rem;
   letter-spacing: 0.08em;
   font-weight: 300;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+
+  @include md {
+    font-style: 1.875rem;
+  }
+
+
 }
 
 a {

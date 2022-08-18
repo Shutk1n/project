@@ -4,38 +4,59 @@
 $local-gap: calc(50px / 3);
 
 .skills {
-  padding: $gap-sm;
+  @include sm-min {
+    padding: $gap-sm;
+  }
+
+  @include sm {
+    padding: $gap;
+  }
 
   &__container {
     display: grid;
 
-    gap: $gap-sm;
     margin-bottom: $gap;
 
-    @media (min-width: 992px) {
+    gap: $gap-sm;
+
+    @include sm-min {
+      padding: $gap-sm;
+    }
+
+    @include sm {
+      padding: $gap;
+    }
+
+    @include lg-min {
       grid-template-areas: "a1 a1 a2 a3""a4 a5 a5 a6""a7 a8 a9 a6";
       grid-template-columns: repeat(4, 1fr);
     }
 
-    @media (max-width: 991px) and (min-width: 768px) {
+    @include lg-md {
       grid-template-areas: "a1 a1 a2""a3 a4 a4""a5 a5 a6 ""a7 a8 a6""a7 a9 a9";
       grid-template-columns: repeat(3, 1fr);
+
     }
 
-    @media (max-width: 767px) and (min-width: 576px) {
+    @include md-sm {
       grid-template-areas: "a1 a2""a3 a2""a4 a4""a5 a6""a5 a7""a8 a9";
       grid-template-columns: repeat(2, 1fr);
+
     }
 
-    @media (max-width: 575px) {
+    @include sm {
       grid-template-areas: "a1""a2""a3""a4""a5""a6""a7""a8""a9";
       grid-template-columns: 1fr;
+
     }
   }
 
   &__actions {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+
+    @include sm-min {
+      margin-bottom: 30px;
+    }
   }
 }
