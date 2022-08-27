@@ -6,6 +6,8 @@
   z-index: 1;
 
   &__container {
+    display: grid;
+
     @extend %container;
   }
 
