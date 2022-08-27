@@ -1,5 +1,5 @@
-@use "../../presets/" as *;
-@use "../../mixins/" as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 .header-menu {
   position: absolute;
@@ -10,14 +10,16 @@
 
   @include md {
     background-color: rgba($color-gray-dark, 0.25);
-    box-shadow: -5px -10px 30px darken($color-gray-dark, 40%);
+
+    @include box-shadow;
   }
 
   &__container {
-    display: flex;
+    display: grid;
     align-items: center;
 
     @extend %container;
     gap: $gap;
+    grid-template-columns: auto 1fr;
   }
 }

@@ -1,13 +1,12 @@
-@use "../../../presets/" as *;
-@use "../../../mixins/" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
-$local-gap: calc(50px / 3);
+$local-gap: calc(40px / 3);
 
 .skills {
   @include sm-min {
     padding: $gap-sm;
   }
-
   @include sm {
     padding: $gap;
   }
@@ -15,48 +14,44 @@ $local-gap: calc(50px / 3);
   &__container {
     display: grid;
 
-    margin-bottom: $gap;
-
-    gap: $gap-sm;
-
-    @include sm-min {
-      padding: $gap-sm;
-    }
-
-    @include sm {
-      padding: $gap;
-    }
-
     @include lg-min {
-      grid-template-areas: "a1 a1 a2 a3""a4 a5 a5 a6""a7 a8 a9 a6";
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
       grid-template-columns: repeat(4, 1fr);
     }
-
     @include lg-md {
-      grid-template-areas: "a1 a1 a2""a3 a4 a4""a5 a5 a6 ""a7 a8 a6""a7 a9 a9";
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
       grid-template-columns: repeat(3, 1fr);
-
     }
-
     @include md-sm {
-      grid-template-areas: "a1 a2""a3 a2""a4 a4""a5 a6""a5 a7""a8 a9";
+      grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
       grid-template-columns: repeat(2, 1fr);
-
+    }
+    @include sm-min {
+      gap: $gap-sm;
+    }
+    @include sm {
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+      grid-template-columns: 1fr;
+      gap: $gap;
     }
 
-    @include sm {
-      grid-template-areas: "a1""a2""a3""a4""a5""a6""a7""a8""a9";
-      grid-template-columns: 1fr;
-
+    @media (min-height: 691px) {
+      grid-auto-rows: calc(33.33vh - #{$local-gap});
+    }
+    @media (max-height: 690px) {
+      grid-auto-rows: calc(230px - #{$local-gap});
     }
   }
+
 
   &__actions {
     display: flex;
     justify-content: center;
 
+    margin-top: $gap;
+
     @include sm-min {
-      margin-bottom: 30px;
+      margin-bottom: $gap-lg;
     }
   }
 }
